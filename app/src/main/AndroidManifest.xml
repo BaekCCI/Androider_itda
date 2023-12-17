@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:name="com.example.app.ReservationApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/iconlogo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidProject"
+        tools:targetApi="31">
+        <activity
+            android:name=".MyStudent_P"
+            android:exported="false" />
+        <activity
+            android:name=".Student_List"
+            android:exported="false" />
+        <activity
+            android:name=".alarm_center_A"
+            android:exported="false" />
+        <activity
+            android:name=".DaySchedule"
+            android:exported="false" />
+        <activity
+            android:name=".MyProfessorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyPg_P"
+            android:exported="false" />
+        <activity
+            android:name=".MyPg_S"
+            android:exported="false" />
+        <activity
+            android:name=".DetailIlJeongP"
+            android:exported="false" />
+        <activity
+            android:name=".IlJeong_P"
+            android:exported="false" />
+        <activity
+            android:name=".DetailIlJeong_s"
+            android:exported="false" />
+        <activity
+            android:name=".IlJeong_S"
+            android:exported="false" />
+        <activity
+            android:name=".feedback_p"
+            android:exported="false" />
+        <activity
+            android:name=".Record_p"
+            android:exported="false" />
+        <activity
+            android:name=".feedback_s"
+            android:exported="false" />
+        <activity
+            android:name=".Record_S"
+            android:exported="false" />
+        <activity
+            android:name=".MainScreen_P"
+            android:exported="false" />
+        <activity
+            android:name=".MainScreen_S"
+            android:exported="false" />
+        <activity
+            android:name=".logIn"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ConsultRequest_S_1"
+            android:exported="false" />
+        <activity
+            android:name=".ConsultRequest_S_2"
+            android:exported="false" />
+        <activity
+            android:name=".FixedSchedule_P"
+            android:exported="false" />
+        <service android:name=".MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="OPEN_ACTIVITY_1" />
+                <action android:name="MyFirebaseMessagingService" />
+                <action android:name=".MyFirebaseMessagingService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher_background" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+    </application>
+
+</manifest>

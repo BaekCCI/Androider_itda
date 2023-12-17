@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:gravity="center"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="상담이 취소되었습니다."
+        android:textColor="#000"
+        android:textSize="24sp" />
+
+    <android.widget.Button
+        android:id="@+id/OK"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/availablenextbutton"
+        android:gravity="center"
+        android:onClick="ok"
+        android:textColor="#FFFFFF"
+        android:text="확인"
+        android:textSize="18sp" />
+
+</LinearLayout>

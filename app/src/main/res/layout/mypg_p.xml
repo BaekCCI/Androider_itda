@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#82cbc4"
+    tools:context=".MyPg_P">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#82CBC4"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="        마이페이지"
+        app:titleTextColor="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/back_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+    <View
+        android:id="@+id/semiBG"
+        android:layout_width="wrap_content"
+        android:layout_height="560dp"
+        android:background="#FFFFFF"
+        android:layout_marginTop="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+
+    <ImageView
+        android:id="@+id/myImg"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="@id/major"
+        app:layout_constraintStart_toStartOf="@id/border"
+        android:radius="20dp"/>
+
+    <ImageButton
+        android:id="@+id/changeImgBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/camerabackg"
+        android:src="@drawable/album_icon"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintStart_toStartOf="@id/myImg"
+        app:layout_constraintEnd_toStartOf="@id/name"
+        app:layout_constraintBottom_toTopOf="@id/border"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="강동기"
+        android:textSize="34dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/semiBG"/>
+
+    <TextView
+        android:id="@+id/school"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="전북대학교/공과대학"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <TextView
+        android:id="@+id/major"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="컴퓨터공학부"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/school" />
+
+    <ImageView
+        android:id="@+id/border"
+        android:layout_width="350dp"
+        android:layout_height="280dp"
+        android:src="@drawable/border"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintTop_toTopOf="@id/semiBG"
+        app:layout_constraintBottom_toBottomOf="@id/semiBG"
+        app:layout_constraintEnd_toEndOf="@id/semiBG"
+        app:layout_constraintStart_toStartOf="@id/semiBG" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/borderTitle" />
+
+    <TextView
+        android:id="@+id/borderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="내 정보"
+        android:textSize="20dp"
+        android:textColor="#0e6d62"
+        app:layout_constraintStart_toStartOf="@id/border"
+        app:layout_constraintTop_toTopOf="@id/border" />
+
+    <Button
+        android:id="@+id/editBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#00FFFFFF"
+        android:gravity="bottom|center_horizontal"
+        android:text="수정하기 >"
+        android:textColor="#787878"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="@id/borderTitle"
+        app:layout_constraintEnd_toEndOf="@id/border"
+        app:layout_constraintTop_toTopOf="@id/border" />
+
+    <TextView
+        android:id="@+id/InfoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
+        android:text="연구실\n\n전화번호\n\n이메일\n\nzoom링크\n\n 알림On/Off"
+        android:textColor="#595959"
+        app:layout_constraintBottom_toBottomOf="@id/border"
+        app:layout_constraintStart_toStartOf="@id/border"
+        app:layout_constraintTop_toTopOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/laboratory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="공과대학 8호관 502호"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/InfoTitle"
+        app:layout_constraintStart_toEndOf="@id/InfoTitle"/>
+
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="30dp"
+        android:text="010-0000-0000"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/laboratory"
+        app:layout_constraintStart_toEndOf="@id/InfoTitle"/>
+    <EditText
+        android:id="@+id/editPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:maxLength="15"
+        android:inputType="phone"
+        app:layout_constraintTop_toTopOf="@id/phone"
+        app:layout_constraintBottom_toBottomOf="@id/phone"
+        app:layout_constraintStart_toStartOf="@id/phone"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="30dp"
+        android:text="00000@gmail.com"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        app:layout_constraintStart_toEndOf="@id/InfoTitle" />
+
+    <EditText
+        android:id="@+id/editMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:maxLength="30"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toTopOf="@id/mail"
+        app:layout_constraintBottom_toBottomOf="@id/mail"
+        app:layout_constraintStart_toStartOf="@id/mail"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/zoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="30dp"
+        android:text="google.com"
+        android:linksClickable="true"
+        android:autoLink="web"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/mail"
+        app:layout_constraintStart_toEndOf="@id/InfoTitle" />
+    >
+
+    <EditText
+        android:id="@+id/editZoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:inputType="textWebEditText"
+        app:layout_constraintTop_toTopOf="@+id/zoom"
+        app:layout_constraintBottom_toBottomOf="@+id/zoom"
+        app:layout_constraintStart_toStartOf="@+id/zoom"
+        android:visibility="invisible"/>
+
+    <Switch
+        android:id="@+id/onOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/InfoTitle"
+        app:layout_constraintEnd_toEndOf="@id/border"
+        android:checked="true"
+        />
+
+    <Button
+        android:id="@+id/editCompleteBtn"
+        android:text="완료"
+        android:textColor="#0E6D62"
+        android:textSize="14dp"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/complebtn"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/border"
+        app:layout_constraintEnd_toEndOf="@id/border"
+        android:visibility="invisible"
+        android:onClick="DialogClick"
+        />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="bottom|center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="#00FFFFFF"
+        android:text="로그아웃 >"
+        android:textColor="#595959"
+        android:textSize="13dp"
+        app:layout_constraintTop_toBottomOf="@id/border"
+        app:layout_constraintEnd_toEndOf="@id/border" />
+
+    <View
+        android:id="@+id/underLine"
+        android:layout_width="120dp"
+        android:layout_height="1dp"
+        android:background="#c2c2c2"
+        app:layout_constraintTop_toBottomOf="@id/logoutBtn"
+        app:layout_constraintEnd_toEndOf="@id/logoutBtn"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#82cbc4"
+    tools:context=".MyStudent_P">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#82CBC4"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="        나의 학생 목록"
+        app:titleTextColor="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/back_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+    <View
+        android:id="@+id/semiBG"
+        android:layout_width="wrap_content"
+        android:layout_height="560dp"
+        android:background="#FFFFFF"
+        android:layout_marginTop="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+
+    <ImageView
+        android:id="@+id/myImg"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="@id/school"
+        app:layout_constraintStart_toStartOf="@id/border"
+        android:radius="20dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="홍길동"
+        android:textSize="34dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/semiBG"/>
+
+    <TextView
+        android:id="@+id/schoolNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="202100000"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <TextView
+        android:id="@+id/school"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="전북대학교/ㅇㅇ과"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/schoolNum" />
+
+    <ImageView
+        android:id="@+id/border"
+        android:layout_width="350dp"
+        android:layout_height="280dp"
+        android:src="@drawable/border"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintTop_toTopOf="@id/semiBG"
+        app:layout_constraintBottom_toBottomOf="@id/semiBG"
+        app:layout_constraintEnd_toEndOf="@id/semiBG"
+        app:layout_constraintStart_toStartOf="@id/semiBG" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/borderTitle" />
+
+    <TextView
+        android:id="@+id/borderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="내 정보"
+        android:textSize="20dp"
+        android:textColor="#0e6d62"
+        app:layout_constraintStart_toStartOf="@id/border"
+        app:layout_constraintTop_toTopOf="@id/border" />
+
+
+    <TextView
+        android:id="@+id/InfoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
+        android:text="상태\n\n복수/부/연계전공\n\n휴대폰번호\n\n이메일"
+        android:textColor="#595959"
+        app:layout_constraintBottom_toBottomOf="@id/border"
+        app:layout_constraintStart_toStartOf="@id/border"
+        app:layout_constraintTop_toTopOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="재학/휴학생"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/InfoTitle"
+        app:layout_constraintStart_toEndOf="@id/InfoTitle"/>
+
+
+    <TextView
+        android:id="@+id/subMajor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="30dp"
+        android:text="00과"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/status"
+        app:layout_constraintStart_toEndOf="@id/InfoTitle"/>
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="30dp"
+        android:text="010-0000-0000"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/subMajor"
+        app:layout_constraintStart_toEndOf="@id/InfoTitle" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="30dp"
+        android:text="00000@gmail.com"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        app:layout_constraintStart_toEndOf="@id/InfoTitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
